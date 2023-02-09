@@ -1,0 +1,7 @@
+[Unit]
+Description=Update PaddleOCR HTTP socket file permissions
+ConditionPathExists=/run/paddleocr/http.sock
+
+[Service]
+Type=oneshot
+ExecStart=setfacl -m g:paddleocr:rwx /run/paddleocr/http.sock

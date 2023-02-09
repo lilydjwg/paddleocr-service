@@ -1,0 +1,17 @@
+[Exec]
+ResolvConf=off
+NoNewPrivileges=true
+User=paddleocr
+
+[Files]
+Bind=/run/paddleocr
+Bind=/var/cache/pacman/pkg
+
+Bind=/dev/nvidia0
+Bind=/dev/nvidiactl
+Bind=/dev/nvidia-modeset
+Bind=/dev/nvidia-uvm
+Bind=/dev/nvidia-uvm-tools
+
+[Network]
+Private=true

@@ -1,0 +1,11 @@
+[Exec]
+ResolvConf=off
+NoNewPrivileges=true
+User=paddleocr
+
+[Files]
+Bind=/run/paddleocr
+Bind=/var/cache/pacman/pkg
+
+[Network]
+Private=true

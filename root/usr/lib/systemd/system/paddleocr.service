@@ -1,0 +1,14 @@
+[Unit]
+Description=PaddleOCR service
+Wants=paddleocr-sock.path
+After=paddleocr-sock.path
+Before=paddleocr-sock.service
+Conflicts=sleep.target
+
+[Service]
+Type=exec
+ExecStart=systemd-nspawn -M paddleocr --user=paddleocr /home/paddleocr/paddleocr-http --loglevel=warn -j 4
+
+[Install]
+WantedBy=multi-user.target
+Also=paddleocr-resume.service

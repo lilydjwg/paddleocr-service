@@ -1,0 +1,14 @@
+[Unit]
+Description=Resume PaddleOCR service after resumption from sleep
+Before=sleep.target
+StopWhenUnneeded=yes
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStop=-modprobe -r nvidia-uvm
+ExecStop=-modprobe nvidia-uvm
+ExecStop=systemctl start paddleocr.service
+
+[Install]
+WantedBy=sleep.target
