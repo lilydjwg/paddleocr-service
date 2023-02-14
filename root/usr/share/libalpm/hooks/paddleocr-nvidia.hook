@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = nvidia-utils
+
+[Action]
+Description = Updating libcuda.so.1 for paddleocr...
+Exec = /usr/bin/cp /usr/lib/libcuda.so.1 /var/lib/machines/paddleocr/usr/local/lib
+When = PostTransaction

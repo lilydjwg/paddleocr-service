@@ -1,7 +1,7 @@
 # Maintainer: lilydjwg <lilydjwg@gmail.com>
 pkgname=paddleocr-config
 pkgver=1.0
-pkgrel=8
+pkgrel=9
 pkgdesc="Config paddleocr nspawn service"
 arch=('any')
 license=("BSD")
