@@ -1,7 +1,7 @@
 [Unit]
 Description=PaddleOCR service
 Wants=paddleocr-sock.path
-After=paddleocr-sock.path
+After=paddleocr-sock.path systemd-modules-load.service
 Before=paddleocr-sock.service
 Conflicts=sleep.target
 
