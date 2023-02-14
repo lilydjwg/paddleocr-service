@@ -6,5 +6,5 @@ Target = nvidia-utils
 
 [Action]
 Description = Updating libcuda.so.1 for paddleocr...
-Exec = /usr/bin/cp /usr/lib/libcuda.so.1 /var/lib/machines/paddleocr/usr/local/lib
+Exec = /usr/bin/install -Dm755 /usr/lib/libcuda.so.1 /var/lib/machines/paddleocr/usr/local/lib
 When = PostTransaction
