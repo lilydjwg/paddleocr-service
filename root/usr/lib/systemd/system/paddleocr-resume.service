@@ -6,8 +6,8 @@ StopWhenUnneeded=yes
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStop=-modprobe -r nvidia-uvm
-ExecStop=-modprobe nvidia-uvm
+ExecStop=modprobe -r nvidia-uvm
+ExecStop=modprobe nvidia-uvm
 ExecStop=systemctl start paddleocr.service
 
 [Install]
