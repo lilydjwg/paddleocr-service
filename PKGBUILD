@@ -19,4 +19,5 @@ build() {
 }
 package() {
   cp -ar "$startdir"/root/* "${pkgdir}"
+  find "${pkgdir}" -name '*~' -delete
 }
