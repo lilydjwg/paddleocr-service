@@ -7,7 +7,7 @@ Conflicts=sleep.target
 
 [Service]
 Type=exec
-ExecStart=systemd-nspawn -M paddleocr --user=paddleocr /home/paddleocr/paddleocr-http --loglevel=warn -j 4
+ExecStart=systemd-nspawn -M paddleocr --user=paddleocr /home/paddleocr/paddleocr-http --loglevel=warn
 
 [Install]
 WantedBy=multi-user.target
