@@ -7,6 +7,7 @@ Conflicts=sleep.target
 
 [Service]
 Type=exec
+ExecStartPre=nvidia-modprobe -u
 ExecStart=systemd-nspawn -M paddleocr --user=paddleocr /home/paddleocr/paddleocr-http --loglevel=warn
 
 [Install]
