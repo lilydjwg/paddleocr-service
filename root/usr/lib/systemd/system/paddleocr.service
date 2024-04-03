@@ -8,6 +8,7 @@ Conflicts=sleep.target
 [Service]
 Type=exec
 ExecStartPre=nvidia-modprobe -u
+ExecStartPre=sh -c 'while [ ! -e /dev/nvidia-modeset ]; do sleep 1; done'
 ExecStart=systemd-nspawn -M paddleocr --user=paddleocr /home/paddleocr/paddleocr-http --loglevel=warn
 
 [Install]
